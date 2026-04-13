@@ -1,0 +1,78 @@
+<!--
+Name: Gnanitha Suryadevara
+Course: SWE 645
+Purpose: Student Survey Form
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+
+<body class="w3-light-grey">
+
+<div class="w3-content w3-padding-64">
+  <h2>Student Survey</h2>
+
+  <form class="w3-container w3-white w3-padding">
+
+    <p><input class="w3-input" placeholder="First Name" required></p>
+    <p><input class="w3-input" placeholder="Last Name" required></p>
+    <p><input class="w3-input" placeholder="Street Address" required></p>
+    <p><input class="w3-input" placeholder="City" required></p>
+    <p><input class="w3-input" placeholder="State" required></p>
+    <p><input class="w3-input" placeholder="Zip" required></p>
+    <p><input class="w3-input" placeholder="Telephone" required></p>
+    <p><input class="w3-input" type="email" placeholder="Email" required></p>
+    <p><input class="w3-input" type="date" required></p>
+
+    <p>What did you like most?</p>
+    <p>
+      <input type="checkbox"> Students
+      <input type="checkbox"> Location
+      <input type="checkbox"> Campus
+      <input type="checkbox"> Atmosphere
+      <input type="checkbox"> Dorm Rooms
+      <input type="checkbox"> Sports
+    </p>
+
+    <p>How did you hear about us?</p>
+    <p>
+      <input type="radio" name="source"> Friends
+      <input type="radio" name="source"> TV
+      <input type="radio" name="source"> Internet
+      <input type="radio" name="source"> Other
+    </p>
+
+    <p>
+      Recommendation Likelihood
+      <select class="w3-select">
+        <option>Very Likely</option>
+        <option>Likely</option>
+        <option>Unlikely</option>
+      </select>
+    </p>
+
+    <p>
+      Raffle (10 numbers, 1–100)
+      <input class="w3-input">
+    </p>
+
+    <p>
+      Comments
+      <textarea class="w3-input"></textarea>
+    </p>
+
+    <p>
+      <button class="w3-button w3-green">Submit</button>
+      <button type="reset" class="w3-button w3-red">Cancel</button>
+    </p>
+
+  </form>
+</div>
+
+</body>
+</html>

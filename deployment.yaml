@@ -1,0 +1,40 @@
+# Name: Gnanitha Suryadevara
+# Course: SWE 645 - HW2
+# Purpose: Kubernetes Deployment and Service manifest for the SWE645 web application
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645-deployment
+  labels:
+    app: swe645
+spec:
+  replicas: 3                        # At least 3 pods for resiliency
+  selector:
+    matchLabels:
+      app: swe645
+  template:
+    metadata:
+      labels:
+        app: swe645
+    spec:
+      containers:
+        - name: swe645-container
+          image: YOUR_DOCKERHUB_USERNAME/swe645-hw2:latest   # <-- Replace with your Docker Hub username
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always    # Always pull latest image on deploy
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: swe645-service
+spec:
+  type: LoadBalancer                 # Exposes app externally
+  selector:
+    app: swe645
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
