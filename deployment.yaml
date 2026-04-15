@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: swe645-container
-          image: YOUR_DOCKERHUB_USERNAME/swe645-hw2:latest   # <-- Replace with your Docker Hub username
+          image: suryadevara/swe645-hw2:latest   # <-- Replace with your Docker Hub username
           ports:
             - containerPort: 80
           imagePullPolicy: Always    # Always pull latest image on deploy
