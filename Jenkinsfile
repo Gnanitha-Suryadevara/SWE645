@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USERNAME = 'YOUR_DOCKERHUB_USERNAME'       // <-- Replace with your Docker Hub username
+        DOCKERHUB_USERNAME = 'suryadevara'       // <-- Replace with your Docker Hub username
         IMAGE_NAME = "${DOCKERHUB_USERNAME}/swe645-hw2"
         IMAGE_TAG = "latest"
         KUBECONFIG_CREDENTIAL_ID = 'kubeconfig-credentials'  // Jenkins credential ID for kubeconfig
